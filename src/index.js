@@ -1,7 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter as Router} from 'react-router-dom';
-import { NavBar } from './Components/NavBar';
 
 import './index.css';
 import App from './App';
@@ -9,10 +7,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <Router>
-    <NavBar />
-    <App />
-  </Router>,
+  <App />,
   document.getElementById('root')
 );
 

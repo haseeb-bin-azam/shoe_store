@@ -1,25 +1,31 @@
-import React from 'react';
-import Shoe from './../shoes.json';
+import { Link } from 'react-router-dom';
+
+import '../css/Product.css';
+
+import shoes from '../shoes.json'
 
 export const Product = () => {
-
-    // console.log(Shoe);
-    // console.log(Object.keys(Shoe));
-
+    // console.log(shoes);
     return (
-        <div>
-            <h1>Product</h1>
-            <div>
-                {Object.keys(Shoe).map((ObjectKey, ind) => {
-                    const shoes = Shoe[ObjectKey];
-                    return (
-                        <div key={ind}>
-                            <h4>{shoes.name}</h4>
-                            <img src={shoes.img} alt={shoes.name} height={200}/>
+        <div className='product'>
+            {shoes.map(product => {
+                return (
+                    <div className='card' key={product._id}>
+                        <Link to={`/product/${product._id}`}>
+                            <img src={product.src} alt=''/>
+                        </Link>
+
+                        <div className='content'>
+                            <h3>
+                                <Link to={`product/${product._id}`}>{product.title}</Link>
+                            </h3>
+                            <span>${product.price}</span>
+                            <p>{product.description}</p>
+                            <button>Add to cart</button>
                         </div>
-                    );
-                })}
-            </div>
+                    </div>
+                )
+            })}
         </div>
-    );
+    )
 }

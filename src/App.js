@@ -1,18 +1,18 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
 
-import { Home } from './Components/Home'
-import { Product } from './Components/Product'
-import { NotFound } from './Components/NotFound'
+import { Header } from './components/Header';
+import { Section } from './components/Section';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/product" element={<Product />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
-  )
+    <div className='app'>
+      <Router>
+        <Header />
+        <Section />
+      </Router>
+    </div>
+  );
 }
 
 export default App;
