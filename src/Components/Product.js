@@ -21,7 +21,7 @@ export const Product = () => {
                             </h3>
                             <span>${product.price}</span>
                             <p>{product.description}</p>
-                            <button>Add to cart</button>
+                            <button><Link to='/cart'>Add to cart</Link></button>
                         </div>
                     </div>
                 )
