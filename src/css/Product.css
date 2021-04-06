@@ -54,7 +54,7 @@
     margin: 10px 0;
 }
 
-.card button {
+.card .addtocart {
     border: none;
     outline: none;
     background: #333;
@@ -66,4 +66,5 @@
     text-transform: uppercase;
     margin: 10px 0;
     letter-spacing: 2px;
+    text-decoration: none;
 }

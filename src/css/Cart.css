@@ -1,0 +1,48 @@
+.cart_div {
+    box-shadow: 0 0 5px #ccc;
+    padding: 15px 10px;
+    text-align: center;
+}
+
+.amount span {
+    color: crimson;
+    padding: 0 20px;
+}   
+
+.amount button {
+    width: 40px;
+    height: 30px;
+    border: 1px solid #555;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.delete {
+    color: crimson;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+.total {
+    /* width: 100px; */
+    /* height: 50px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.total a {
+    text-decoration: none;
+    background: #333;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 10px 25px;
+}
+
+.total h3 {
+    margin-right: 50px;
+    color: crimson;
+}

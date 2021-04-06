@@ -1,4 +1,6 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import {TransactionContext} from '../context/GlobalState';
 
 import '../css/Product.css';
 
@@ -6,6 +8,9 @@ import shoes from '../shoes.json'
 
 export const Product = () => {
     // console.log(shoes);
+    let {addCart} = useContext(TransactionContext);
+
+
     return (
         <div className='product'>
             {shoes.map(product => {
@@ -21,7 +26,7 @@ export const Product = () => {
                             </h3>
                             <span>${product.price}</span>
                             <p>{product.description}</p>
-                            <button><Link to='/cart'>Add to cart</Link></button>
+                            <button className='addtocart' onClick={()=>{ addCart(product._id) }}>Add to cart</button>
                         </div>
                     </div>
                 )

@@ -2,11 +2,15 @@ import Menu_Icon from '../icons_svg/bars-solid.svg';
 import Close_Icon from '../icons_svg/times-solid.svg';
 import Cart_Icon from '../icons_svg/shopping-cart-solid.svg';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+
+import {TransactionContext} from '../context/GlobalState'
 
 import '../css/Header.css'
 
 export const Header = () => {
+
+    let {cart} = useContext(TransactionContext);
 
     const [toggle, setToggle] = useState(false);
 
@@ -38,7 +42,7 @@ export const Header = () => {
                 </ul>
 
                 <div className='cart'>
-                    <span>0</span>
+                    <span>{cart.length}</span>
                     <Link to='/cart'>
                         <img src={Cart_Icon} alt='' width='20' />
                     </Link>
